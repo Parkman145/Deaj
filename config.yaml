@@ -1,0 +1,8 @@
+port: COM9
+baud_rate: 9600
+max_slider_value: 4095
+slider_mapping:
+  0: master
+  1: spotify.exe
+  2: chrome.exe
+  3: overwatch.exe
