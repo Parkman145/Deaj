@@ -81,8 +81,9 @@ def main():
     with serial.Serial(port, baud_rate) as ser:
         while(True):
             data = ser.readline().decode("ascii")
-            audio_controller.set_volume((int(data) / max_slider_value)**2)
+            audio_controller.set_volume((int(data) / max_slider_value)**4)
             print(data)
+            
 
 
 if __name__ == "__main__":
