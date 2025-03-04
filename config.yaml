@@ -1,4 +1,4 @@
-port: COM9
+port: COM10
 baud_rate: 9600
 max_slider_value: 1023
 slider_mapping:
