@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const int num_sliders = 1;
-int slider_pins[num_sliders] = {A0};
+const int num_sliders = 4;
+int slider_pins[num_sliders] = {A0, A1, A2, A3};
 
 // put function declarations here:
 
