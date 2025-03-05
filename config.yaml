@@ -2,7 +2,7 @@ port: COM10
 baud_rate: 9600
 max_slider_value: 1023
 slider_mapping:
-  0: master
-  1: spotify.exe
+  0: discord.exe
+  1: Spotify.exe
   2: chrome.exe
-  3: overwatch.exe
+  3: Overwatch.exe
