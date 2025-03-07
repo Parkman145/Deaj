@@ -17,5 +17,5 @@ void loop() {
     }
   }
   Serial.print("\n");
-  delay(10);
+  delay(50);
 }
