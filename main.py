@@ -20,16 +20,15 @@ def main():
     port = config["port"]
     max_slider_value = config["max_slider_value"]
     baud_rate = config["baud_rate"]
-    arudino = Arduino(port, baud_rate)
+    arduino = Arduino(port, baud_rate)
 
     # Setup audio controllers
     audio_controllers = []
     for process_name in config["slider_mapping"].values():
         audio_controllers.append(AudioController(process_name))
 
-    
     while(True):
-        slider_values = arudino.get_values()
+        slider_values = arduino.get_values()
         # print(data)
         for slider_value, audio_controller in zip(slider_values, audio_controllers):
             # print(audio_controller.process_name)
