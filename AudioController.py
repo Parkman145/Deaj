@@ -1,5 +1,23 @@
 from pycaw.pycaw import AudioUtilities
 
+
+class NoiseSuppressor:
+    def __init__(self, threshold):
+        self._last = 0
+        self._threshold = threshold
+
+    def get(self, x):
+        if abs(x-self._last) > self._threshold:
+            # Use new value
+            self._last = x
+            return x, True
+        else:
+            # Use old Value
+            return self._last, False
+        
+    def set_threshold(self, threshold):
+        self._threshold = threshold
+
 class AudioController:
     def __init__(self, process_name):
         self.process_name = process_name
