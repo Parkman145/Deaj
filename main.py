@@ -27,6 +27,7 @@ def main():
     for process_name in config["slider_mapping"].values():
         audio_controllers.append(AudioController(process_name))
 
+    arduino.reset_output_buffer()
     while(True):
         slider_values = arduino.get_values()
         # print(data)
